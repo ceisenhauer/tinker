@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (08b2f3d93c, 2022-04-05)"
-   sodipodi:docname="tinker_logo.svg"
+   sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.648078"
-     inkscape:cx="454.16539"
+     inkscape:cx="454.1654"
      inkscape:cy="420.18642"
      inkscape:window-width="3768"
      inkscape:window-height="2096"
@@ -143,14 +143,14 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.68921px;line-height:1.25;font-family:sans-serif;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.192231"
-       x="92.345299"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.68921px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.192231"
+       x="94.657806"
        y="148.83305"
        id="text4678"><tspan
          sodipodi:role="line"
          id="tspan4676"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.68921px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b3b3b3;stroke-width:0.192231"
-         x="92.345299"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.68921px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.192231"
+         x="94.657806"
          y="148.83305">tinker</tspan></text>
   </g>
 </svg>
