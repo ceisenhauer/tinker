@@ -11,6 +11,10 @@
 #'
 #' @return `int`
 #'
+#' @importFrom zoo rollsum
+#' @importFrom tidyr replace_na
+#' @importFrom purrr detect_index
+#'
 #' @export
 run_index <- function(x, FUN, n = 3, direction = c('forward', 'backward')) {
   direction <- match.arg(direction)

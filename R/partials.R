@@ -1,7 +1,10 @@
 #' .Cut
 #'
-#' @description Cut with sensible defaults for binning continuous variables : includes the lowest
+#' @description [cut] with sensible defaults for binning continuous variables : includes the lowest
 #' value observed and closed on the left. By default the result will be ordered.
+#'
+#' @param ordered_result `bool` If `TRUE`, the output will be an ordered factor. Default is `TRUE`.
+#' @param ... Additional arguments to be passed to [cut].
 #' 
 #' @export
 .cut <- function(ordered_result = TRUE, ...) {
@@ -14,7 +17,11 @@
 
 #' .IQR
 #'
-#' @description Max that ignores NAs.
+#' @description [IQR] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [IQR].
+#'
+#' @importFrom stats IQR
 #'
 #' @export
 .IQR <- function(...) {
@@ -25,18 +32,22 @@
 
 #' .Max
 #'
-#' @description Max that ignores NAs.
+#' @description [max] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [max].
 #'
 #' @export
 .max <- function(...) {
-    stats::max(...,
-               na.rm = TRUE)
+    max(...,
+        na.rm = TRUE)
 }
 
 
 #' .Mean
 #'
-#' @description Mean that ignores NAs.
+#' @description [mean] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [mean].
 #'
 #' @export
 .mean <- function(...) {
@@ -47,19 +58,25 @@
 
 #' .Median
 #' 
-#' @description Median that ignores NAs.
+#' @description [median] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [median].
 #' 
+#' @importFrom stats median
+#'
 #' @export
 .median <- function(...) {
-    median(...,
-           na.rm = TRUE)
+    stats::median(...,
+                  na.rm = TRUE)
 }
 
 
 #' .Min
 #' 
-#' @description Min that ignores NAs.
-#' 
+#' @description [min] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [min].
+#'
 #' @export
 .min <- function(...) {
     min(...,
@@ -69,20 +86,27 @@
 
 #' .SD
 #'
-#' @description SD that ignores NAs.
+#' @description [sd] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [sd].
+#'
+#' @importFrom stats sd
 #'
 #' @export
 .sd <- function(...) {
-    sd(...,
-       na.rm = TRUE)
+    stats::sd(...,
+              na.rm = TRUE)
 }
 
 
 #' .Summarize
 #' 
-#' @description Tidyverse summarize that drops groups by default.
+#' @description Tidyverse [summarize] that drops groups by default.
 #'
-#' dplyr summarize
+#' @param ... Additional arguments to be passed to [summarize].
+#'
+#' @importFrom dplyr summarize
+
 #' @export
 .summarize <- function(...) {
     dplyr::summarize(...,
@@ -92,10 +116,15 @@
 
 #' .Quantile
 #'
-#' @description Quantile that ignores NAs.
+#' @description [quantile] that ignores NAs.
+#'
+#' @param ... Additional arguments to be passed to [quantile].
+#'
+#' @importFrom stats quantile
 #'
 #' @export
 .quantile <- function(...) {
-    quantile(...,
-             na.rm = TRUE)
+    stats::quantile(...,
+                    na.rm = TRUE)
 }
+

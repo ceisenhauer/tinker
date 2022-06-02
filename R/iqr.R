@@ -6,12 +6,14 @@
 #' @param v `vector` vector to analyze.
 #' @param digits `int` number of digits after the decimal to show in the iqr values.
 #' @param percent `bool` whether to display values as percents
-#' @param brackets `bool` if TRUE result will have square brackets (ie: [lower - upper] instead of
+#' @param brackets `bool` if TRUE result will have square brackets (ie: \[lower - upper\] instead of
 #'   lower - upper). default is FALSE.
+#'
+#' @importFrom stats quantile
 #'
 #' @return `str`
 iqr <- function(v, digits = 1, percent = FALSE, brackets = FALSE) {
-  quantiles <- quantile(v)
+  quantiles <- stats::quantile(v)
 
   lower <- round(quantiles[[2]], digits = digits)
   upper <- round(quantiles[[4]], digits = digits)
