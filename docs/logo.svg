@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.58268357"
-     inkscape:cx="501.98773"
-     inkscape:cy="364.69194"
+     inkscape:zoom="1.648078"
+     inkscape:cx="454.16539"
+     inkscape:cy="420.18642"
      inkscape:window-width="3768"
      inkscape:window-height="2096"
      inkscape:window-x="72"
@@ -90,7 +90,7 @@
      transform="translate(-13.01001,-40.235264)">
     <path
        sodipodi:type="star"
-       style="fill:#ffffff;stroke:#4b4b4b;stroke-width:6.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;stroke:#000000;stroke-width:6.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path891"
        inkscape:flatsided="true"
        sodipodi:sides="6"
@@ -121,7 +121,7 @@
       <path
          d="m 604.27,478.34 c -66.273,0 -120.18,54.402 -120.18,121.29 0,66.871 53.906,121.27 120.18,121.27 66.273,0 120.18,-54.402 120.18,-121.27 0,-66.868 -53.914,-121.29 -120.18,-121.29 z"
          id="path826"
-         style="fill:#000000" />
+         style="fill:#4d4d4d" />
     </g>
     <g
        id="g1890"
