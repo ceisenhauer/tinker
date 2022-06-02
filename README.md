@@ -7,6 +7,3 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 ## tldr.
 Let's be real, most of us have personal R packages. This one is mine. I am a data scientist and epidemiologist, so most of the functions in tinker are designed to make functional programming and data visualization easier. Does that sound useful to you? Maybe. Am I just shouting into the void? Probably.
 
-
-## contributing
-If you would like to contribute to `pitoolbox`, please refer to the [contribution guide](CONTRIBUTING.html).
