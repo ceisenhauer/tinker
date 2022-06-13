@@ -16,5 +16,6 @@ Imports:
     dplyr,
     magrittr,
     purrr,
+    rlang,
     tidyr,
     zoo
