@@ -99,6 +99,19 @@
 }
 
 
+#' .Sum
+#'
+#' @description [sum] that ignores NAs.
+#' 
+#' @param ... Additional arguments to be passed to [sum].
+#'
+#' @export
+.sum <- function(...) {
+    sum(...,
+        na.rm = TRUE)
+}
+
+
 #' .Summarize
 #' 
 #' @description Tidyverse [summarize] that drops groups by default.
