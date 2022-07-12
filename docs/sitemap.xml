@@ -46,6 +46,12 @@
     <loc>/reference/dot-summarize.html</loc>
   </url>
   <url>
+    <loc>/reference/french_format.html</loc>
+  </url>
+  <url>
+    <loc>/reference/french_to_numeric.html</loc>
+  </url>
+  <url>
     <loc>/reference/grapes-notin-grapes.html</loc>
   </url>
   <url>
@@ -61,7 +67,13 @@
     <loc>/reference/run_index.html</loc>
   </url>
   <url>
+    <loc>/reference/si_format.html</loc>
+  </url>
+  <url>
     <loc>/reference/source_directory.html</loc>
+  </url>
+  <url>
+    <loc>/reference/up_down_format.html</loc>
   </url>
   <url>
     <loc>/reference/validate_names.html</loc>
