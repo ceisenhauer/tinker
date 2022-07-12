@@ -35,9 +35,14 @@ reference:
 - subtitle: but not in a gaslighty way
 - contents: 
   - french_to_numeric
-  - identify_outbreaks
+  - get_week_start
   - run_index
   - validate_names
+
+- title: analyze
+- subtitle: tell me about your mother
+- contents:
+  - identify_outbreaks
 
 - title: render
 - subtitle: take a picture and it lasts forever
