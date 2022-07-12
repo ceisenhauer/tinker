@@ -14,9 +14,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports:
     dplyr,
+    ISOweek,
     magrittr,
     purrr,
     rlang,
     R.utils,
+    stringr,
     tidyr,
     zoo
