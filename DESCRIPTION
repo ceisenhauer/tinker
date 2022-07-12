@@ -17,5 +17,6 @@ Imports:
     magrittr,
     purrr,
     rlang,
+    R.utils,
     tidyr,
     zoo
