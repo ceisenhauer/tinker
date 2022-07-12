@@ -8,36 +8,41 @@ authors:
 
 reference:
 - title: syntactic sugar
-- description: helps the medicine go down
+- subtitle: helps the medicine go down 
 - contents:
   - '%notin%'
 
 - title: file operations
-- description: read em and weep
-- contents:
+- subtitle: read em and weep
+- contents: 
   - source_directory
 
 - title: sensible defaults
-- description: ignoring NAs like god intended
-- contents:
-  - .cut
-  - .IQR
-  - .max
-  - .mean
-  - .median
-  - .min
-  - .sd
-  - .sum
+- subtitle: ignoring NAs like god intended
+- contents: 
+  - .cut 
+  - .IQR 
+  - .max 
+  - .mean 
+  - .median 
+  - .min 
+  - .sd 
+  - .sum 
   - .summarize
   - .quantile
 
-- title: manipulate
-- description: but not in a gaslighty way
-- contents:
+- title: manipulate 
+- subtitle: but not in a gaslighty way
+- contents: 
+  - french_to_numeric
+  - identify_outbreaks
   - run_index
   - validate_names
 
 - title: render
-- description: take a picture and it lasts forever
+- subtitle: take a picture and it lasts forever
 - contents:
+  - french_format
   - iqr
+  - si_format
+  - up_down_format
