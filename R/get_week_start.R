@@ -8,8 +8,12 @@
 #' @importFrom stringr str_pad
 #' @importFrom ISOweek ISOweek2date
 get_week_start <- function(week, year) {
-  week <- stringr::str_pad(week, 2, pad = '0')
-  date <- ISOweek::ISOweek2date(paste0(year, '-W', week, '-1'))
+  if (is.na(week) | is.na(year)) {
+    date <- NA
+  } else {
+    week <- stringr::str_pad(week, 2, pad = '0')
+    date <- ISOweek::ISOweek2date(paste0(year, '-W', week, '-1'))
+  }
 
   return(date)
 }
