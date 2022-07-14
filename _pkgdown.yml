@@ -36,6 +36,7 @@ reference:
 - contents: 
   - french_to_numeric
   - get_week_start
+  - iso_to_date
   - run_index
   - validate_names
 
