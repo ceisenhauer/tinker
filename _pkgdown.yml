@@ -38,6 +38,7 @@ reference:
   - get_week_start
   - iso_to_date
   - run_index
+  - str_to_display
   - validate_names
 
 - title: analyze
