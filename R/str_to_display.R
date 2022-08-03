@@ -16,5 +16,7 @@ str_to_display <- function(text) {
   out <- text %>%
            stringr::str_replace('_', ' ') %>%
            stringr::str_to_title()
+
+  return(out)
 }
 
