@@ -1,6 +1,7 @@
 template:
   bootstrap: 5
-  bootswatch: sandstone
+  bslib:
+    primary: '#315799'
 
 authors:
   Catherine Eisenhauer:
@@ -34,6 +35,7 @@ reference:
 - title: manipulate 
 - subtitle: but not in a gaslighty way
 - contents: 
+  - excel_to_date
   - french_to_numeric
   - get_week_start
   - iso_to_date
