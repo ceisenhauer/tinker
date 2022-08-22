@@ -12,11 +12,18 @@
 #' excel_to_date(date)
 #'
 #' @importFrom dplyr %>%
+#' @importFrom methods is
 #' @export
 excel_to_date <- function(date) {
-  out <- date %>%
-           as.numeric() %>%
-           as.Date(origin = '1899-12-30')
+  # double check that it wasn't already converted
+  if (methods::is(date, 'Date')) {
+    out <- date
+
+  } else {
+    out <- date %>%
+             as.numeric() %>%
+             as.Date(origin = '1899-12-30')
+  }
 
   return(out)
 }
