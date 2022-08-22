@@ -22,6 +22,7 @@
 validate_names <- function(df_new, df_ref, fix_zone = NULL, fix_reg = NULL) {
   names <- df_ref %>%
              dplyr::select(.data$reg, .data$zone) %>%
+             dplyr::distinct() %>%
              dplyr::mutate(good = 'yes')
 
   df_new <- df_new %>%
