@@ -25,7 +25,7 @@
 #'
 #' @return df
 #'
-#' @importFrom dplyr filter mutate
+#' @importFrom dplyr filter mutate pull
 #' @importFrom zoo na.locf
 #' @importFrom R.utils seqToIntervals
 #' @importFrom rlang .data
@@ -46,6 +46,21 @@ identify_outbreaks <- function(df, min_weekly = 20, min_size = 100, min_duration
              outbreak = zoo::na.locf(.data$outbreak,
                                      maxgap = max_gap - 1,
                                      na.rm = FALSE))
+
+    final_value <- tmp %>%
+                     filter(.data$date == max(.data$date)) %>%
+                     pull(.data$outbreak)
+
+    # fix na.locf behavior on tails -- it will fill TRUE to the end if there is a TRUE <= max_gap
+    # places before the end of the dataset
+    if (!is.na(final_value)) {
+      epi_curve <- tidyr::replace_na(tmp$cases, 0)
+      end_of_main <- purrr::detect_index(epi_curve,
+                                         function(value) value >= min_weekly,
+                                         .dir = 'backward')
+      tmp[(end_of_main + 1):nrow(tmp), 'outbreak'] <- NA
+    }
+
 
     # build data frame with the start/end idexes for each observed outbreak
     outbreak_indices <- which(tmp$outbreak == 1) %>%
