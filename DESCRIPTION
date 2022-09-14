@@ -16,6 +16,7 @@ Imports:
     dplyr,
     ISOweek,
     magrittr,
+    methods,
     purrr,
     rlang,
     R.utils,
