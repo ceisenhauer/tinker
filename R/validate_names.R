@@ -59,7 +59,7 @@ validate_names <- function(df_new, df_ref, fix_zone = NULL, fix_reg = NULL) {
   # generate warning if failures persist (just in case this function is reused on bigger data later)
   if (nrow(bad) > 0) {
     warning('some observations have incorrect zone / region names !')
-    print(bad)
+    print(as.data.frame(bad))
   }
 
   df_new <- df_new %>%
