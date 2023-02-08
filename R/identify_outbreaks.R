@@ -25,7 +25,7 @@
 #'
 #' @return df
 #'
-#' @importFrom dplyr filter mutate pull
+#' @importFrom dplyr filter mutate pull last
 #' @importFrom zoo na.locf
 #' @importFrom R.utils seqToIntervals
 #' @importFrom rlang .data
