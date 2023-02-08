@@ -19,47 +19,45 @@
 #' @importFrom rlang .data
 #'
 #' @export
-validate_names <- function(df_new, df_ref, fix_zone = NULL, fix_reg = NULL) {
-  names <- df_ref %>%
-             dplyr::select(.data$reg, .data$zone) %>%
-             dplyr::distinct() %>%
-             dplyr::mutate(good = 'yes')
-
-  df_new <- df_new %>%
-           dplyr::left_join(names)
-
-
-  # identify failures)
-  bad <- df_new %>%
-           dplyr::filter(is.na(.data$good)) %>%
-           dplyr::select(.data$reg, .data$zone)
-
+validate_names <- function(df_new, df_ref, levels = c('ad1', 'ad2'),
+                           fixes = NULL) {
+  refs <- df_ref[ , levels] %>%
+            #dplyr::select(.data$reg, .data$zone) %>%
+            dplyr::distinct() %>%
+            dplyr::mutate(good = 'yes')
 
   # fix and update df of failures
-  if (!is.null(fix_zone)) {
-    df_new <- df_new %>%
-                 dplyr::mutate(zone = dplyr::recode(.data$zone, !!!fix_zone))
+  if (!is.null(fixes)) {
+    for (level in names(fixes)) {
+      df_new[[level]] <- dplyr::recode(df_new[[level]], !!!fixes[[level]])
+    }
   }
 
-  if (!is.null(fix_reg)) {
-    df_new <- df_new %>%
-                 dplyr::mutate(reg = dplyr::recode(.data$reg, !!!fix_reg))
-  }
+  #if (!is.null(fix_zone)) {
+    #df_new <- df_new %>%
+                 #dplyr::mutate(zone = dplyr::recode(.data$zone, !!!fix_zone))
+  #}
+
+  #if (!is.null(fix_reg)) {
+    #df_new <- df_new %>%
+                 #dplyr::mutate(reg = dplyr::recode(.data$reg, !!!fix_reg))
+  #}
     
   df_new <- df_new %>%
-              dplyr::select(-.data$good) %>%
-              dplyr::left_join(names)
+              dplyr::left_join(refs)
 
   bad <- df_new %>%
            dplyr::filter(is.na(.data$good)) %>%
-           dplyr::arrange(.data$reg) %>%
-           dplyr::select(.data$reg, .data$zone)
+           dplyr::arrange(.data[[levels[[1]]]])
 
   
   # generate warning if failures persist (just in case this function is reused on bigger data later)
   if (nrow(bad) > 0) {
     warning('some observations have incorrect zone / region names !')
-    print(as.data.frame(bad))
+    bad[, levels] %>%
+      dplyr::distinct() %>%
+      as.data.frame() %>%
+      print()
   }
 
   df_new <- df_new %>%
